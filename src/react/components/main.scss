@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-@import './navigation/navigation.scss';
-@import './messages/messages.scss';
-@import './feed/feed.scss';
-@import './chat/chat.scss';
-@import './profile/profile.scss';
-@import './sidebar/sidebar.scss';
+@media screen and (min-width: 1024px) {
+  @import './navigation/navigation.scss';
+  @import './messages/messages.scss';
+  @import './feed/feed.scss';
+  @import './chat/chat.scss';
+  @import './profile/profile.scss';
+  @import './sidebar/sidebar.scss';
+  @import './twit/twit.scss';
 
-body {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-#root {
-  display: flex;
+  body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  #root {
+    display: flex;
+  }
 }

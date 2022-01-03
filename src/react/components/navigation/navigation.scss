@@ -1,66 +1,60 @@
-@media screen and (min-width: 1024px) {
-
-  #navigation {
-    //width: 17.5vw;
-    width: 250px;
-  }
-  
-  #twi-logo-wrap {
-    //width: 1.8vw;
-    width: 30px;
-    //height: 1.8vw;
-    height: 30px;
-    //margin: 1.2vw;
-    margin: 16px;
-    fill: #1D9BF0;
-  }
-  
-  .link {
-    text-decoration: none;
-  }
-  
-  nav {
-    span {
-      font-family: 'Roboto';
-      //font-size: 1.4vw;
-      font-size: 20px;
-      color: #000000;
-    }
-  }
-  
-  .nav-icons {
-    //width: 1.8vw;
-    //height: 1.8vw;
-    width: 30px;
-    height: 30px;
-  }
-  
-  .nav-items-wrap {
-    display: flex;
-    align-items: center;
-    //padding: 1.2vw;
-    padding: 16px;
-  }
-  
-  .nav-span-wrap {
-    //padding: 0 1.3vw 0 1.3vw;
-    padding: 0 18px 0 18px;
-  }
-  
-  #create-twit-btn {
-    width: 90%;
-    //padding: 1.2vw 0 1.2vw 0;
-    padding: 16px 0 16px 0;
-    border: none;
-    border-radius: 9999px;
-    background-color: #1D9BF0;
-    font-family: 'Roboto';
-    //font-size: 1.1vw;
-    font-size: 18px;
-    color: #ffffff;
-  }
-  
-  #create-twit-btn:hover {
-    cursor: pointer;
-  } 
+#navigation {
+  width: 250px;
+  border-right: 1px solid #e6e6e6;
 }
+
+#twi-logo-wrap {
+  width: 30px;
+  height: 30px;
+  margin: 16px;
+  fill: #1d9bf0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+nav {
+  span {
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #000000;
+  }
+}
+
+.nav-icons {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-items-wrap {
+  display: inline-flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.nav-items-wrap:hover {
+  border-radius: 9999px;
+  background-color: #bfbfbf;
+}
+
+.nav-span-wrap {
+  padding: 0 18px 0 18px;
+}
+
+#create-twit-btn {
+  width: 90%;
+  height: 62px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 9999px;
+  background-color: #1d9bf0;
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #ffffff;
+}
+
+#create-twit-btn:hover {
+  cursor: pointer;
+  background-color: #0b69a8;
+} 
