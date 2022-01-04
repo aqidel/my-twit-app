@@ -11,12 +11,23 @@
   @import './twit/twit.scss';
 
   body {
-    display: flex;
-    justify-content: center;
     margin: 0;
   }
   
   #root {
+    display: flex;
+  }
+
+  #left-fixed-wrap {
+    width: 25vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #right-fixed-wrap {
+    position: relative;
     display: flex;
   }
 }

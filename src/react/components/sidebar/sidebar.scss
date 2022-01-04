@@ -1,5 +1,61 @@
 #sidebar {
-  width: 24.5vw;
+  width: 350px;
   height: 100vh;
-  background-color: rgb(255, 153, 0);
+  border-left: 1px solid #e6e6e6;
+  padding: 20px 0 0 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+}
+
+#users-list {
+  width: 280px;
+  border-radius: 16px;
+  padding: 10px 10px 0 10px;
+  background-color: #f2f2f2;
+
+  p {
+    margin: 0;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.sb-subscribe-wrap {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sb-user {
+  display: flex;
+  align-items: center;
+}
+
+.sb-avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 60%;
+}
+
+.sb-username {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sb-subscribe {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 9999px;
+  background-color: #000000;
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
 }

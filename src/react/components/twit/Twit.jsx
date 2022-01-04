@@ -4,9 +4,7 @@ import avatar from '../../../images/avatar.png';
 export default function Twit() {
   return (
     <div className='twit-wrap'>
-      <div className='twit-avatar-wrap'>
-        <img src={avatar} alt='img' />
-      </div>
+      <img className='twit-avatar' src={avatar} alt='img' />
       <div className='twit-main'>
         <div className='twit-header'>
           <p className='twit-username'>Username</p>
@@ -32,7 +30,7 @@ export default function Twit() {
                 </path>
               </g>
             </svg>
-            <span>000</span>
+            <span>0</span>
           </div>
           <div className='twit-retwit-wrap'>
             <svg viewBox='0 0 24 24' aria-hidden='true'>
@@ -50,7 +48,7 @@ export default function Twit() {
                 </path>
               </g>
             </svg>
-            <span>000</span>
+            <span>0</span>
           </div>
           <div className='twit-like-wrap'>
             <svg viewBox='0 0 24 24' aria-hidden='true'>
@@ -64,7 +62,7 @@ export default function Twit() {
                 </path>
               </g>
             </svg>
-            <span>000</span>
+            <span>0</span>
           </div>
         </div>
       </div>

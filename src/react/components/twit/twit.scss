@@ -1,6 +1,8 @@
 .twit-wrap {
   width: 600px;
+  border-bottom: 1px solid #e6e6e6;
   padding: 10px 20px;
+  box-sizing: border-box;
   display: flex;
 }
 
@@ -28,19 +30,16 @@
   text-align: justify;
 }
 
-.twit-avatar-wrap {
-
-  img {
-    width: 50px;
-    height: 50px;
-    border-radius: 60%;
-  }
+.twit-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 60%;
 }
 
 .twit-bottom {
+  width: 50%;
   display: flex;
   justify-content: space-between;
-  width: 50%;
 
   div {
     display: flex;
@@ -54,10 +53,10 @@
   }
 
   span {
+    margin-left: 10px;
     font-family: 'Roboto';
     font-size: 15px;
     color: #666666;
-    margin-left: 10px;
   }
 
   .twit-comment-wrap:hover {
@@ -68,6 +67,28 @@
 
     span {
       color: #1d9bf1;
+    }
+  }
+
+  .twit-retwit-wrap:hover {
+
+    svg {
+      fill: #33cc33;
+    }
+
+    span {
+      color: #33cc33;
+    }
+  }
+
+  .twit-like-wrap:hover {
+
+    svg {
+      fill: #ff3333;
+    }
+
+    span {
+      color: #ff3333;
     }
   }
 }

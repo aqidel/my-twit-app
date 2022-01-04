@@ -14,11 +14,34 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigation/>
+        <div id='left-fixed-wrap'>
+          <Navigation/>
+        </div>
         <Routes>
-          <Route path='/' element={<><Feed/><Sidebar/></>}/>
-          <Route path='messages' element={<><Messages/><Chat/></>}/>
-          <Route path='profile' element={<><Profile/><Sidebar/></>}/>
+          <Route path='/' element={
+            <>
+              <Feed/>
+              <div id='right-fixed-wrap'>
+                <Sidebar/>
+              </div>
+            </>}>
+          </Route>
+          <Route path='messages' element={
+            <>
+              <Messages/>
+              <div id='right-fixed-wrap'>
+                <Chat/>
+              </div>
+            </>}>
+          </Route>
+          <Route path='profile' element={
+            <>
+              <Profile/>
+              <div id='right-fixed-wrap'>
+                <Sidebar/>
+              </div>
+            </>}>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

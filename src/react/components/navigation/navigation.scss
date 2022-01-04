@@ -1,6 +1,11 @@
 #navigation {
-  width: 250px;
+  width: 270px;
+  height: 100vh;
   border-right: 1px solid #e6e6e6;
+  padding-right: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
 }
 
 #twi-logo-wrap {
@@ -28,9 +33,9 @@ nav {
 }
 
 .nav-items-wrap {
+  padding: 16px;
   display: inline-flex;
   align-items: center;
-  padding: 16px;
 }
 
 .nav-items-wrap:hover {
@@ -55,6 +60,6 @@ nav {
 }
 
 #create-twit-btn:hover {
-  cursor: pointer;
   background-color: #0b69a8;
+  cursor: pointer;
 } 
