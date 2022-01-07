@@ -1,0 +1,20 @@
+#modal-wrap {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background-color: rgba(230, 230, 230, 0.3);
+}
+
+#modal {
+  width: 300px;
+  height: 200px;
+  background-color: #e6e6e6;
+  z-index: 9999;
+  opacity: 1;
+}

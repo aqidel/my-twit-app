@@ -1,16 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import Navigation from './navigation/Navigation.jsx';
-import Chat from './chat/Chat.jsx';
-import Feed from './feed/Feed.jsx';
-import Messages from './messages/Messages.jsx';
-import Profile from './profile/Profile.jsx';
-import Sidebar from './sidebar/Sidebar.jsx';
+import Navigation from './Navigation.jsx';
+import Feed from './Feed.jsx';
+import Profile from './Profile.jsx';
+import Sidebar from './Sidebar.jsx';
+import CreateTwit from './createTwit.jsx';
 
-import './main.scss';
+import '../../styles/main.scss';
 
 export default function App() {
+  const toggle = useSelector((state) => state.main.show);
+
   return (
     <>
       <BrowserRouter>
@@ -26,14 +28,6 @@ export default function App() {
               </div>
             </>}>
           </Route>
-          <Route path='messages' element={
-            <>
-              <Messages/>
-              <div id='right-fixed-wrap'>
-                <Chat/>
-              </div>
-            </>}>
-          </Route>
           <Route path='profile' element={
             <>
               <Profile/>
@@ -44,6 +38,7 @@ export default function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      {toggle ? <CreateTwit/> : null}
     </>
   )
 }

@@ -2,13 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 @media screen and (min-width: 1024px) {
-  @import './navigation/navigation.scss';
-  @import './messages/messages.scss';
-  @import './feed/feed.scss';
-  @import './chat/chat.scss';
-  @import './profile/profile.scss';
-  @import './sidebar/sidebar.scss';
-  @import './twit/twit.scss';
+  @import './navigation.scss';
+  @import './feed.scss';
+  @import './profile.scss';
+  @import './sidebar.scss';
+  @import './twit.scss';
+  @import './createTwit.scss';
 
   body {
     margin: 0;

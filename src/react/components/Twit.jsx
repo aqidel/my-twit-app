@@ -1,18 +1,14 @@
 import React from 'react';
-import avatar from '../../../images/avatar.png';
 
-export default function Twit() {
+export default function Twit(props) {
   return (
     <div className='twit-wrap'>
-      <img className='twit-avatar' src={avatar} alt='img' />
+      <div className='twit-avatar'></div>
       <div className='twit-main'>
         <div className='twit-header'>
           <p className='twit-username'>Username</p>
           <p className='twit-text'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-            laboris nisi ut aliquip ex ea commodo consequat.
+            {props.text}
           </p>
         </div>
         <div className='twit-bottom'>

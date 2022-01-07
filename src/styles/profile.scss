@@ -1,0 +1,26 @@
+#profile {
+  width: 600px;
+  height: 100vh;
+}
+
+#main-info {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+#p-avatar {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: #737373;
+}
+
+#p-username {
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: 700;
+}

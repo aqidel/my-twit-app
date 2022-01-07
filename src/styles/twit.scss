@@ -12,7 +12,9 @@
 }
 
 .twit-main {
+  width: 510px;
   padding-left: 20px;
+  box-sizing: border-box;
 }
 
 .twit-username {
@@ -33,7 +35,8 @@
 .twit-avatar {
   width: 50px;
   height: 50px;
-  border-radius: 60%;
+  border-radius: 50%;
+  background-color: #737373;
 }
 
 .twit-bottom {
