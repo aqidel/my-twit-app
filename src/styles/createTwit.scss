@@ -8,13 +8,79 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
-  background-color: rgba(230, 230, 230, 0.3);
+  background-color: rgba(38, 38, 38, 0.5);
 }
 
 #modal {
-  width: 300px;
-  height: 200px;
-  background-color: #e6e6e6;
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 20px;
   z-index: 9999;
+  background-color: #ffffff;
   opacity: 1;
+}
+
+#close-modal {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+#close-modal:hover {
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+
+#create-twit-wrap {
+  display: flex;
+}
+
+#create-twit-avatar {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: #737373;
+}
+
+#textarea {
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  display: block;
+  resize: none;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+
+#textarea:focus-visible {
+  outline: none;
+}
+
+// #submit-btn-wrap {
+//   display: flex;
+//   justify-content: end;
+// }
+
+#submit-btn {
+  width: 110px;
+  height: 50px;
+  border: none;
+  border-radius: 9999px;
+  background-color: #1d9bf0;
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #ffffff;
+}
+
+#submit-btn:hover {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

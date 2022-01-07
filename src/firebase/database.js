@@ -8,3 +8,11 @@ const firebaseApp = initializeApp({
 });
 
 const db = getFirestore();
+
+export default function createTwit(text, user) {
+  const ref = collection(db, 'tweets');
+  addDoc(ref, {
+    text: text,
+    user: user
+  });
+}
