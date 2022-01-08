@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import { toggle } from '../mainSlice';
-import createTwit from '../../firebase/database';
 
 export default function CreateTwit() {
   
@@ -9,9 +9,14 @@ export default function CreateTwit() {
 
   const input = React.createRef();
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    createTwit(input.current.value, 'user01');
+  const db = getFirestore();
+
+  async function createTwit(event) {
+    await event.preventDefault();
+    await addDoc(collection(db, 'tweets'), {
+      text: input.current.value,
+      user: 'user01'
+    });
     dispatch(toggle());
   };
 
@@ -32,7 +37,7 @@ export default function CreateTwit() {
         </div>
         <div id='create-twit-wrap'>
           <div id='create-twit-avatar'></div>
-          <form onSubmit={(event) => handleSubmit(event)}>
+          <form onSubmit={(event) => createTwit(event)}>
             <textarea id='textarea' 
                       rows={7} 
                       cols={35} 

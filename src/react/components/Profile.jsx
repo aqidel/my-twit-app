@@ -1,6 +1,7 @@
 import React from 'react';
 import Twit from './Twit.jsx';
-import twits from '../../data.json';
+
+let temp = [{text: 'test'}];
 
 export default function Profile() {
   return (
@@ -10,7 +11,7 @@ export default function Profile() {
         <span id='p-username'>Username</span>
       </div>
       <div id='my-twits'>
-        {twits.twits.map((element, i) => {
+        {temp.map((element, i) => {
           return <Twit text={element.text} key={i}/>
         })}
       </div>

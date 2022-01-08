@@ -1,13 +1,15 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+require('babel-polyfill');
 
 module.exports = {
   mode: 'development',
   context: path.resolve(__dirname, 'src'),
-  entry: {
-    index: './react/index.js'
-  },
+//  entry: {
+//    index: './react/index.js'
+//  },
+  entry: ['babel-polyfill', './react/index.js'],
   devServer: {
     static: './dist',
     port: 3000,
@@ -18,7 +20,7 @@ module.exports = {
       template: './index.html',
       favicon: './images/favicon.png'
     }),
-    new MiniCssExtractPlugin()
+    new MiniCssExtractPlugin(),
   ],
   output: {
     filename: '[name].[contenthash].js',
