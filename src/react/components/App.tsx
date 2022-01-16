@@ -1,17 +1,17 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
-import Navigation from './Navigation.jsx';
-import Feed from './Feed.jsx';
-import Profile from './Profile.jsx';
-import Sidebar from './Sidebar.jsx';
-import CreateTwit from './createTwit.jsx';
+import type { RootState } from '../store';
+import Navigation from './Navigation';
+import Feed from './Feed';
+import Profile from './Profile';
+import Sidebar from './Sidebar';
+import CreateTwit from './createTwit';
 
 import '../../styles/main.scss';
 
 export default function App() {
-  const toggle = useSelector((state) => state.main.show);
+  const toggle = useSelector((state: RootState) => state.main.show);
 
   return (
     <>

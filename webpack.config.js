@@ -6,10 +6,7 @@ require('babel-polyfill');
 module.exports = {
   mode: 'development',
   context: path.resolve(__dirname, 'src'),
-//  entry: {
-//    index: './react/index.js'
-//  },
-  entry: ['babel-polyfill', './react/index.js'],
+  entry: ['babel-polyfill', './react/index.tsx'],
   devServer: {
     static: './dist',
     port: 3000,
@@ -30,6 +27,11 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.(js|jsx)$/i,
         exclude: /node_modules/,
@@ -57,6 +59,9 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   optimization: {
     runtimeChunk: 'single',

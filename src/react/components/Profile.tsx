@@ -1,5 +1,5 @@
 import React from 'react';
-import Twit from './Twit.jsx';
+import Twit from './Twit';
 
 let temp = [{text: 'test'}];
 

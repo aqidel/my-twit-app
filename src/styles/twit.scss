@@ -11,10 +11,15 @@
   cursor: pointer;
 }
 
-.twit-main {
+.twit-content-wrap {
   width: 510px;
   padding-left: 20px;
   box-sizing: border-box;
+}
+
+.twit-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .twit-username {
@@ -22,6 +27,12 @@
   font-family: 'Roboto';
   font-size: 15px;
   font-weight: 700;
+}
+
+.delete-twit {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
 
 .twit-text {

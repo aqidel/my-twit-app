@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
+import { getFirestore, collection, doc, setDoc } from 'firebase/firestore';
 import { toggle } from '../mainSlice';
 
 export default function CreateTwit() {
   
   const dispatch = useDispatch();
 
-  const input = React.createRef();
+  const input = React.createRef<HTMLTextAreaElement>();
 
   const db = getFirestore();
 
-  async function createTwit(event) {
+  async function createTwit(event: FormEvent) {
     await event.preventDefault();
-    await addDoc(collection(db, 'tweets'), {
+    const ref = await doc(collection(db, 'twits'));
+    await setDoc(ref, {
+      user: 'user01',
       text: input.current.value,
-      user: 'user01'
-    });
+      id: ref.id
+    })
     dispatch(toggle());
   };
 

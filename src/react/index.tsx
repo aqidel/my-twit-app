@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import store from './store';
+import { store } from './store';
 import { Provider } from 'react-redux';
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
-import { collection, query, getFirestore, onSnapshot } from 'firebase/firestore';
-import App from './components/App.jsx';
+import App from './components/App';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAqYRrFrxNxA8f-onYP0ZXNpG_ktvcUkzs',
@@ -19,18 +18,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const db = getFirestore();
-
-async function xyz() {
-  const queriedData = await query(collection(db, "tweets"));
-  await onSnapshot(queriedData, (querySnapshot) => {
-    querySnapshot.forEach((elem) => {
-      console.log("Current data: ", elem.data());
-    })
-  });
-}
-
-//xyz()
 
 ReactDOM.render(
   <React.StrictMode>
