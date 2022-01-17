@@ -12,13 +12,9 @@ export default function CreateTwit() {
   const db = getFirestore();
 
   async function createTwit(event: FormEvent) {
-    await event.preventDefault();
+    event.preventDefault();
     const ref = await doc(collection(db, 'twits'));
-    await setDoc(ref, {
-      user: 'user01',
-      text: input.current.value,
-      id: ref.id
-    })
+    await setDoc(ref, {user: 'user01', text: input.current!.value, id: ref.id});
     dispatch(toggle());
   };
 

@@ -1,7 +1,13 @@
 import React from 'react';
 import { getFirestore, doc, deleteDoc } from 'firebase/firestore';
 
-export default function Twit(props) {
+interface Props {
+  id: string;
+  user: string;
+  text: string;
+}
+
+export default function Twit(props: Props) {
   
   async function deleteTwit() {
     const db = getFirestore();
