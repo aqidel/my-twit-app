@@ -20,7 +20,7 @@ export default function CreateTwit() {
   };
 
   return (
-    <div id='modal-wrap'>
+    <div className='modal-wrap'>
       <div id='modal'>
         <div id='close-modal' onClick={() => dispatch(toggle())}>
           <CloseBtn/>

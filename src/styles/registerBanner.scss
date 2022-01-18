@@ -1,0 +1,52 @@
+#register-banner {
+  width: 100%;
+  height: 60px;
+  background-color: #1d9bf0;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin-right: 50px;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 150%;
+    color: #ffffff;
+  }
+
+  button {
+    height: 30px;
+    border-radius: 9999px;
+    font-family: 'Roboto';
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 150%;
+    cursor: pointer;
+  }
+}
+
+#auth {
+  width: 80px;
+  margin-right: 20px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  background-color: #1d9bf0;
+  color: #ffffff;
+}
+
+#auth:hover {
+  background-color: #57b5f4;
+}
+
+#register {
+  width: 170px;
+  border: none;
+  background-color: #ffffff;
+}
+
+#register:hover {
+  background-color: #d9d9d9;
+}

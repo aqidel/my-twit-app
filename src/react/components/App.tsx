@@ -7,11 +7,13 @@ import Feed from './Feed';
 import Profile from './Profile';
 import Sidebar from './Sidebar';
 import CreateTwit from './createTwit';
+import RegisterBanner from './RegisterBanner';
 
 import '../../styles/main.scss';
 
 export default function App() {
   const toggle = useSelector((state: RootState) => state.main.show);
+  const logged = useSelector((state: RootState) => state.main.logged);
 
   return (
     <>
@@ -39,6 +41,7 @@ export default function App() {
         </Routes>
       </BrowserRouter>
       {toggle ? <CreateTwit/> : null}
+      {!logged ? <RegisterBanner/> : null}
     </>
   )
 }

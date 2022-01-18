@@ -3,7 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const mainSlice = createSlice({
   name: 'mainSlice',
   initialState: {
-    show: false
+    show: false,
+    logged: false,
   },
   reducers: {
     toggle: (state) => {
