@@ -1,7 +1,7 @@
-#navigation {
+#navigation-wrap {
   width: 270px;
   height: 100vh;
-  border-right: 1px solid #e6e6e6;
+  border-right: 1px solid #d9d9d9;
   padding-right: 20px;
   box-sizing: border-box;
   position: fixed;
@@ -19,32 +19,27 @@
   text-decoration: none;
 }
 
-nav {
-  span {
+.nav-icons {
+  width: 30px;
+  height: 30px;
+}
+
+.link-items {
+  padding: 16px;
+  display: inline-flex;
+  align-items: center;
+
+  p {
+    margin: 0 18px;
     font-family: 'Roboto';
     font-size: 20px;
     color: #000000;
   }
 }
 
-.nav-icons {
-  width: 30px;
-  height: 30px;
-}
-
-.nav-items-wrap {
-  padding: 16px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.nav-items-wrap:hover {
+.link-items:hover {
   border-radius: 9999px;
   background-color: #bfbfbf;
-}
-
-.nav-span-wrap {
-  padding: 0 18px 0 18px;
 }
 
 #create-twit-btn {

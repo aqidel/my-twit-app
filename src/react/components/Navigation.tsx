@@ -9,29 +9,23 @@ export default function Navigation() {
   const dispatch = useDispatch();
   
   return (
-    <div id='navigation'>
+    <div id='navigation-wrap'>
         <TwitLogo/>
       <nav>
         <Link className='link' to='/'>
-          <div className='nav-items-wrap'>
+          <div className='link-items'>
             <FeedLogo/>
-            <div className='nav-span-wrap'>
-              <span>Лента</span>
-            </div>
+            <p>Лента</p>
           </div>
         </Link>
-        <div className='nav-items-wrap'>
+        <div className='link-items'>
           <MessagesLogo/>
-          <div className='nav-span-wrap'>
-            <span>Сообщения</span>
-          </div>
+          <p>Сообщения</p>
         </div>
         <Link className='link' to='/profile'>
-          <div className='nav-items-wrap'>
+          <div className='link-items'>
             <ProfileLogo/>
-            <div className='nav-span-wrap'>
-              <span>Профиль</span>
-            </div>
+            <p>Профиль</p>
           </div>
         </Link>
         <button onClick={() => dispatch(toggle())} id='create-twit-btn'>Твитнуть</button>

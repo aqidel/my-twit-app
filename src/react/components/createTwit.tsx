@@ -14,8 +14,8 @@ export default function CreateTwit() {
 
   async function createTwit(event: FormEvent) {
     event.preventDefault();
-    const ref = await doc(collection(db, 'twits'));
-    await setDoc(ref, {user: 'user01', text: input.current!.value, id: ref.id});
+    const ref = doc(collection(db, 'twits'));
+    setDoc(ref, {user: 'user01', text: input.current!.value, id: ref.id});
     dispatch(toggle());
   };
 

@@ -1,25 +1,20 @@
 .twit-wrap {
   width: 600px;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #d9d9d9;
   padding: 10px 20px;
   box-sizing: border-box;
   display: flex;
 }
 
 .twit-wrap:hover {
-  background-color: #f2f2f2;
+  background-color: #d9d9d9;
   cursor: pointer;
 }
 
-.twit-content-wrap {
-  width: 510px;
+.twit-content {
+  width: 490px;
   padding-left: 20px;
   box-sizing: border-box;
-}
-
-.twit-header {
-  display: flex;
-  justify-content: space-between;
 }
 
 .twit-username {
@@ -27,12 +22,6 @@
   font-family: 'Roboto';
   font-size: 15px;
   font-weight: 700;
-}
-
-.delete-twit {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
 }
 
 .twit-text {
@@ -104,5 +93,23 @@
     span {
       color: #ff3333;
     }
+  }
+}
+
+.twit-delete-wrap {
+  width: 20px;
+}
+
+.delete-twit {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.delete-twit:hover {
+  background-color: #737373;
+
+  svg {
+    fill: #ffffff;
   }
 }

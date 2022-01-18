@@ -2,6 +2,7 @@ import React from 'react';
 import Twit from './Twit';
 import { getFirestore, query, onSnapshot, collection, DocumentData } from 'firebase/firestore';
 import { useState, useEffect } from 'react';
+import { TwitLogo } from '../svg/SVGs';
 
 export default function Feed() {
 
@@ -22,6 +23,9 @@ export default function Feed() {
 
   return (
     <div id='feed'>
+      <div id='feed-logo-wrap'>
+        <TwitLogo/>
+      </div>
       {state.map((element, i) => {
         return <Twit text={element.text} user={element.user} id={element.id} key={i}/>
       })}
