@@ -6,7 +6,7 @@ import Navigation from './Navigation';
 import Feed from './Feed';
 import Profile from './Profile';
 import Sidebar from './Sidebar';
-import CreateTwit from './createTwit';
+import Modal from './modals/Modal';
 import RegisterBanner from './RegisterBanner';
 
 import '../../styles/main.scss';
@@ -40,7 +40,7 @@ export default function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-      {toggle ? <CreateTwit/> : null}
+      {toggle ? <Modal/> : null}
       {!logged ? <RegisterBanner/> : null}
     </>
   )
