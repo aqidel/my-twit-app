@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { closeModal } from '../../features/modals-slice';
 
-export default function Auth() {
+export default function Register() {
 
   const dispatch = useDispatch();
 
@@ -16,8 +16,8 @@ export default function Auth() {
             </g>
           </svg>
         </div>
-        <div id='auth-wrap'>
-          <h1>Auth</h1>
+        <div id='register-wrap'>
+          <h1>Register</h1>
           <form>
             <input type='email'/>
             <input type='password'/>

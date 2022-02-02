@@ -11,7 +11,7 @@
   background-color: rgba(38, 38, 38, 0.5);
 }
 
-#modal {
+.modal {
   width: 500px;
   height: 300px;
   border-radius: 20px;
@@ -21,14 +21,14 @@
   opacity: 1;
 }
 
-#close-modal {
+.close-modal {
   width: 30px;
   height: 30px;
   margin-bottom: 20px;
   border-radius: 50%;
 }
 
-#close-modal:hover {
+.close-modal:hover {
   background-color: #e6e6e6;
   cursor: pointer;
 }
@@ -58,11 +58,6 @@
 #textarea:focus-visible {
   outline: none;
 }
-
-// #submit-btn-wrap {
-//   display: flex;
-//   justify-content: end;
-// }
 
 #submit-btn {
   width: 110px;

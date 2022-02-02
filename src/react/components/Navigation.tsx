@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { toggle } from '../mainSlice';
+import { showCreateTwit } from '../features/modals-slice';
 import { TwitLogo, FeedLogo, MessagesLogo, ProfileLogo } from '../svg/SVGs';
 
 export default function Navigation() {
@@ -28,7 +28,7 @@ export default function Navigation() {
             <p>Профиль</p>
           </div>
         </Link>
-        <button onClick={() => dispatch(toggle())} id='create-twit-btn'>Твитнуть</button>
+        <button onClick={() => dispatch(showCreateTwit())} id='create-twit-btn'>Твитнуть</button>
       </nav>
     </div>
   );
