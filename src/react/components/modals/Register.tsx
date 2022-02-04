@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { closeModal } from '../../features/modals-slice';
+import { closeModal, showAuth } from '../../features/modals-slice';
 
 export default function Register() {
 
@@ -16,14 +16,17 @@ export default function Register() {
             </g>
           </svg>
         </div>
-        <div id='register-wrap'>
-          <h1>Register</h1>
-          <form>
-            <input type='email'/>
-            <input type='password'/>
-            <input type='submit'/>
-          </form>
-        </div>
+        <p className='reg-text'>
+          Уже зарегистрированы?
+          <span className='reg-link' onClick={() => dispatch(showAuth())}>Авторизоваться</span>
+        </p>
+        <form>
+          <div className='reg-wrap'>
+            <input className='reg-email' type='email' placeholder='E-mail:'/>
+            <input className='reg-password' type='password' placeholder='Password:'/>
+          </div>
+          <input className='reg-submit' type='submit' value='Регистрация'/>
+        </form>
       </div>
     </div>
   )

@@ -17,13 +17,15 @@
   border-radius: 20px;
   padding: 20px;
   z-index: 9999;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 20px 1fr;
   background-color: #ffffff;
   opacity: 1;
 }
 
 .close-modal {
   width: 30px;
-  height: 30px;
   margin-bottom: 20px;
   border-radius: 50%;
 }
@@ -78,4 +80,56 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-between;
+}
+
+.auth-wrap, .reg-wrap {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-text, .reg-text {
+  margin: 0;
+  font-family: 'Roboto';
+  text-align: center;
+}
+
+.auth-link, .reg-link {
+  color: #1d9bf0;
+  text-decoration: underline;
+  text-decoration-color: #1d9bf0;
+  text-decoration-style: dotted;
+  cursor: pointer;
+}
+
+.auth-email, .auth-password, .reg-email, .reg-password {
+  width: 50%;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+
+.auth-email:focus-visible, .auth-password:focus-visible, .reg-email:focus-visible, .reg-password:focus-visible {
+  outline-color: #1d9bf0;
+}
+
+.auth-submit, .reg-submit {
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 9999px;
+  background-color: #1d9bf0;
+  font-family: 'Roboto';
+  font-size: 15px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.auth-submit:hover, .reg-submit:hover {
+  background-color: #0b69a8;
 }
