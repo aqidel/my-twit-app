@@ -17,7 +17,6 @@ export default function Feed() {
       })
       setState([...temp]);
     })
-    console.log('useEffect run!')
   }, [])
 
   return (

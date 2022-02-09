@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { closeModal, showRegister } from '../../features/modals-slice';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 
 export default function Auth() {
-
+  const initialFormData = {
+    email: '',
+    password: '',
+  };
+  const [formData, setFormData] = useState(initialFormData);
   const dispatch = useDispatch();
+
+  function auth(event: any) {
+    event.preventDefault();
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, formData.email, formData.password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  }
 
   return (
     <div className='modal-wrap'>
@@ -20,12 +40,28 @@ export default function Auth() {
           Не зарегистрированы? 
           <span className='auth-link' onClick={() => dispatch(showRegister())}>Зарегистрироваться</span>
         </p>
-        <form>
+        <form onSubmit={(event) => auth(event)}>
           <div className='auth-wrap'>
-            <input className='auth-email' type='email' placeholder='E-mail:'/>
-            <input className='auth-password' type='password' placeholder='Password:'/>
+            <input 
+              className='auth-email' 
+              type='email' 
+              placeholder='E-mail:'
+              value={formData.email}
+              onChange={(event) => setFormData({...formData, email: event.target.value})}
+            />
+            <input 
+              className='auth-password' 
+              type='password' 
+              placeholder='Password:'
+              value={formData.password}
+              onChange={(event) => setFormData({...formData, password: event.target.value})}
+            />
           </div>
-          <input className='auth-submit' type='submit' value='Авторизация'/>
+          <input 
+            className='auth-submit' 
+            type='submit' 
+            value='Авторизация'
+          />
         </form>
       </div>
     </div>
